@@ -14,6 +14,7 @@
 import { ref, Ref } from "@vue/runtime-core";
 import {courts} from "./courts";
     let courtsArray: Ref<Array<any>> = ref(courts);
+
 </script>
 
 <style scoped>

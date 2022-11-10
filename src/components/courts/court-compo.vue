@@ -132,7 +132,10 @@ table tr td {
   background-color: aqua;
   border: 1px solid black;
 }
-
+.loader{
+  width: 150px;
+  height: 150px;
+}
 @media(max-width: 1200px){
   table {
   font-size: 14px;

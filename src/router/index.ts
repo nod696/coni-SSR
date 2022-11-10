@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter as _createRouter, createWebHistory, createMemoryHistory } from 'vue-router'
 import MainPage from "../components/main/main-page.vue"
 
 
@@ -35,9 +35,13 @@ const routes: {path: string, name: string, component: Object}[] = [
   }
 ]
 
-const router = createRouter({
-  history: createWebHistory('/'),
-  routes
-})
-
-export default router
+export function createRouter() {
+  return _createRouter({
+    // use appropriate history implementation for server/client
+    // import.meta.env.SSR is injected by Vite.
+    history: import.meta.env.SSR
+      ? createMemoryHistory('/')
+      : createWebHistory('/'),
+    routes
+  })
+}

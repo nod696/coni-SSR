@@ -41,7 +41,6 @@ import { Ref, ref } from "@vue/runtime-core";
 import { courts } from "./../courts/courts";
 // @ts-ignore
 import { useDragnDrop } from "./dragNdrop";
-// import { setData } from "../../server/api";
 let courtsArray: Ref<Array<any>> = ref(courts);
 let courtItem: Ref<any> = ref(null);
 let selectedItem: Ref<any> = ref(null);

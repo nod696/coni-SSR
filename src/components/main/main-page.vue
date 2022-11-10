@@ -2,27 +2,21 @@
   <div class="main__wrapper">
     <h2 class="main__title">CONI</h2>
     <h3 class="main__subtitle">Правосудие в вашем кармане</h3>
-    <lottie-animation
-
-      path="./coni/assets/layer.json"
-      :width="300"
-      :height="300"
-      :speed="1.5"
-    />
+    <img src="../../../assets/mainIcon.png" alt="" class="main__icon">
     <ul class="social__list">
       <li class="social__item">
         <a href="" class="social__link">
-          <img src="../../assets/fb.png" alt="" class="social__icon" />
+          <img src="../../../assets/fb.png" alt="" class="social__icon" />
         </a>
       </li>
       <li class="social__item">
         <a href="" class="social__link">
-          <img src="../../assets/in.png" alt="" class="social__icon" />
+          <img src="../../../assets/in.png" alt="" class="social__icon" />
         </a>
       </li>
       <li class="social__item">
         <a href="" class="social__link">
-          <img src="../../assets/vk.png" alt="" class="social__icon" />
+          <img src="../../../assets/vk.png" alt="" class="social__icon" />
         </a>
       </li>
     </ul>
@@ -31,7 +25,8 @@
 
 <script setup lang="ts">
 import { ref } from "@vue/reactivity";
-import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue";
+//@ts-ignore
+
 
 </script>
 
@@ -91,5 +86,10 @@ table tr td {
   height: 20px;
 }
 }
-
+.main__icon{
+  align-self: center;
+  justify-self: center;
+  width: 150px;
+  height: 150px;
+}
 </style>
